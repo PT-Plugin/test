@@ -63,13 +63,6 @@ jobs:
           echo "mergedSha=$mergedSha" >> "$GITHUB_ENV"
       
       - run: |
-          if [[ ${{github.event_name}} == "push" ]]
-          then
-            uv lock
-          else
-            uv lock --directory merge
-            mv merge/uv.lock uv.lock
-          fi
           git config user.email github-actions[bot]@users.noreply.github.com
           git config user.name github-actions[bot]
           touch a
