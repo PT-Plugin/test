@@ -68,7 +68,7 @@ jobs:
           touch a
           if ! git diff --exit-code
           then
-            git add uv.lock
+            git add a
             git commit -m "test"
             if ! git push
             then
