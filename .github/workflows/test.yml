@@ -67,7 +67,7 @@ jobs:
           then
             git add a
             git commit -m "test"
-            if ! git push
+            if ! git push origin main
             then
               echo "push permission was denied -- perhaps the "Allow edits by maintainers" box was unchecked?"
             fi
