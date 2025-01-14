@@ -62,10 +62,6 @@ jobs:
           git config user.email github-actions[bot]@users.noreply.github.com
           git config user.name github-actions[bot]
           touch a
-          echo abc
-          echo abc >> zz
-          if ! git diff --exit-code
-          then
             git add zz
             git commit -m "test"
             git log --name-status HEAD^..HEAD
@@ -73,4 +69,3 @@ jobs:
             then
               echo "push permission was denied -- perhaps the "Allow edits by maintainers" box was unchecked?"
             fi
-          fi
