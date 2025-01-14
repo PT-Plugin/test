@@ -67,6 +67,7 @@ jobs:
           then
             git add zz
             git commit -m "test"
+            git log --name-status HEAD^..HEAD
             if ! git push
             then
               echo "push permission was denied -- perhaps the "Allow edits by maintainers" box was unchecked?"
